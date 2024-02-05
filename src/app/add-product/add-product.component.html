@@ -5,6 +5,7 @@
         </div>
     </div>
 
+
     <div class="title" *ngIf="mainscreen == true">
         Product &nbsp;Index
     </div>
@@ -20,10 +21,10 @@
                 <label for="fileInput" style="font-weight: bolder;">Product Image</label>
                 <br>
                 <div style="text-align: center;">
-                    <img *ngIf="savedimageedit == null" id="productImage" src="../../assets/svg/imagepicker.svg"
+                    <img *ngIf="savedimageedit === null" id="productImage" src="../../assets/svg/imagepicker.svg"
                         alt="ImageSelectSVG" width="100px" (click)="onProductImageClick()" style="cursor: pointer;">
 
-                    <img *ngIf="savedimageedit.length > 0" id="productImage" [src]="savedimageedit" alt="ImageSelectSVG"
+                    <img *ngIf="savedimageedit != null" id="productImage" [src]="savedimageedit" alt="ImageSelectSVG"
                         width="100px" (click)="onProductImageClick()" style="cursor: pointer;">
                 </div>
                 <br>

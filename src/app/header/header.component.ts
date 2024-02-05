@@ -73,7 +73,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.menus = getMenuData.filter(x => x.roles.includes(this.user.role))
+    this.menus = getMenuData.filter((x) => x.roles.includes(this.user.role));
   }
 
   menuActiveConfig(route: string, menu: navlink[]) {
@@ -206,7 +206,7 @@ let getMenuData: Array<navlink> = [
   },
   {
     title: 'Products',
-    url: '/products',
+    url: '',
     icon: 'fa fa-pie-chart',
     svg: '../../assets/svg/tag.svg',
     icon_res: 'svg',
